@@ -1,5 +1,7 @@
-*Good morning!*
-* orange
+*Remote Access*
+
+* step1-download vscode
+In this step, we firstly need to download vscode IDE in your computer. Here is the official web of vscode download: https://code.visualstudio.com/
 * # like this？？？？
 * ![Image](https://media.istockphoto.com/photos/orange-picture-id185284489?s=612x612)
 
