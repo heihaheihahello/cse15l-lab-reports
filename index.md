@@ -9,3 +9,5 @@
 * ---
 * apple
 * ![Image](https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202110180743)
+
+[Lab Report 1](lab-report-1-week-2.html)
