@@ -52,9 +52,11 @@ class WhereAmI {
 }
 ```
 2. I tried run this file in my own computer firstly
+
 ![Image](whereami1.jpg)
 
->that shows my computer system is windows10, my user name, my home directory, and my current directory
+>that shows my computer system is windows10, my user name, my home directory, and my current directory.
+
 
 3. open a new powershell by click the **+** in the upper-right cornor:
 ![Image](new_powershell.jpg)
