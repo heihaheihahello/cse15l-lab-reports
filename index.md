@@ -7,7 +7,7 @@ note: I use my own account name for this tutorial, if you need to use the code r
     ![Image](vscode_download.jpg)
 ---
 * **step2-Remotely Connecting**
-1. Because I am using windows system, I need to install the [openSSH](openss.html).
+1. Because I am using windows system, I need to install the [openSSH](openssh.html).
 2. open the vscode now, open a new terminal.
 ![Image](open_terminal.jpg)
 3. in the terminal, enter 
