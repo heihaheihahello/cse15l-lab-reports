@@ -74,7 +74,9 @@ and enter the password
 7. then I go back to the terminal of ssh, use `ls` to check if the uploaded one is there, the use javac and java to run this file.
 ![Image](scp_ex.png)
 > that shows I am currently use linux system in the ssh server, with my account name, my home directory and my current directory
+
 ---
+
 * **step5-SSH Keys**
 1. because I am using windows system, I need to do extra [steps](SSH_Keys_wins.html).
 2. then I create a folder in ssh terminal by entering
