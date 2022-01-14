@@ -36,7 +36,9 @@ Here is what I tried:
 > ls -lat: list the file and directory in current directory by column, with details of files
 
 > ls -a: simply list all the file and directory in current directory
+
 ---
+
 * **step4-Moving Files over SSH with scp**
 1. create a **.java** file in my desktop folder with the following:
 ```
