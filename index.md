@@ -5,6 +5,7 @@ note: I use my own account name for this tutorial, if you need to use the code r
 
     In this step, we need to download and install vscode IDE in your computer. Here is the official web of vscode download: [Link](https://code.visualstudio.com/)
     ![Image](vscode_download.jpg)
+    
 ---
 * **step2-Remotely Connecting**
 1. Because I am using windows system, I need to install the [openSSH](openssh.html).
