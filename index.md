@@ -95,7 +95,9 @@ scp id_ed25519.pub cs15lwi22awj@ieng6.ucsd.edu:~/.ssh/authorized_keys
 5. close the ssh terminal, open a new terminal, try to login server again:
 ![Image](key_done.png)
 > now I don't need to enter the password again.
+
 ---
+
 * **step6-Making Remote Running Even More Pleasant**
 1. in windows terminal, I tried:
 ```
