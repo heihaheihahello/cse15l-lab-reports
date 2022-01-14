@@ -55,6 +55,7 @@ class WhereAmI {
 ![Image](whereami1.jpg)
 
 >that shows my computer system is windows10, my user name, my home directory, and my current directory
+
 3. open a new powershell by click the **+** in the upper-right cornor:
 ![Image](new_powershell.jpg)
 4. first go to desktop folder by `cd desktop`
