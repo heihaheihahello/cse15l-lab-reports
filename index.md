@@ -83,12 +83,13 @@ and enter the password
 ```
 mkdir .ssh
 ```
+
 3. then I upload this key file to ssh server by enter in the windows powershell:
 ```
 cd .ssh
-
 scp id_ed25519.pub cs15lwi22awj@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
+
 4. we should see this now:
 ![Image](key5.jpg)
 5. close the ssh terminal, open a new terminal, try to login server again:
