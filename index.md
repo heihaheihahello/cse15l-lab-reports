@@ -108,6 +108,7 @@ ssh cs15lwi22@ieng6.ucsd.edu "ls"
 2. I can use **;** to do mutiple command in ssh terminal:
 ![Image](part6.2.jpg)
 > I can run both java file as well
+
 ---
 
 End of Lab Report 1
