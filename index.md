@@ -5,4 +5,7 @@
 
 ---
 * banana
+* ![Image](https://www.nipponexpress.com/press/report/img/06-Nov-20-ogp.jpeg)
+* ---
 * apple
+* ![Image](https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202110180743)
