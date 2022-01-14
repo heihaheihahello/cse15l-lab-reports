@@ -14,6 +14,7 @@ Get-Service ssh-agent
 ```
 the page should look like that:
 ![Image](key1.jpg)
+
 5. enter `ssh-add C:\Users\尹豪杰/.ssh\id_ed25519`
 ![Image](key3.png)
 
