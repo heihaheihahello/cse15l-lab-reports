@@ -25,11 +25,11 @@
 ---
 
 * ## check if we successfullly copied to ssh server
-After we login ssh server, by using `ls `, we can see there is a `markdown-parse` directory:
-![Image](report3-4.jpg)
+    After we login ssh server, by using `ls `, we can see there is a `markdown-parse` directory:
+    ![Image](report3-4.jpg)
 
-And then we can see everything is successfully uploaded:
-![Image](report3-5.jpg)
+    And then we can see everything is successfully uploaded:
+    ![Image](report3-5.jpg)
 
 * ## try only copying the files we need 
 
