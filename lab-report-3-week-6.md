@@ -43,7 +43,7 @@
 
     > we can see in this time, we only copy all the `.java` files, `.md` files, and the two files in `lib` directory.
 
-    - Analysis: The `scp -r` can combine with restrictions like `*.java *.md lib/` to only copy the files in the restriction. `*.java` means every `java` file. `*.md` means every `md` file. `lib/` means the `lib` directory. With these restriction, we can only upload the file we need, save some time.
+    - Analysis: The `scp -r` can combine with restrictions like `*.java *.md lib/` to only copy the files in the restriction. `*.java` means every `java` file. `*.md` means every `md` file. `lib/` means the `lib` directory. With these restriction, we can only upload the file we need, saving some time.
 
 ---
 End of 3rd lab report. Thanks for watching!
