@@ -24,12 +24,17 @@
     
 ---
 
-* ## check if we successfullly copied to ssh server
+* ## check if we successfullly copied to ssh server and try to run it
     After we login ssh server, by using `ls `, we can see there is a `markdown-parse` directory:
     ![Image](report3-4.jpg)
 
     And then we can see everything is successfully uploaded:
     ![Image](report3-5.jpg)
+
+    Then we try to run it:
+    ![Image](report3-7.jpg)
+
+    >everything is working good!
 
 * ## try only copying the files we need 
 
@@ -45,6 +50,17 @@
 
     - Analysis: The `scp -r` can combine with restrictions like `*.java *.md lib/` to only copy the files in the restriction. `*.java` means every `java` file. `*.md` means every `md` file. `lib/` means the `lib` directory. With these restriction, we can only upload the file we need, saving some time.
 
+* ## put multiple commands in one line
+    We can do copying the whole directory, and compile and run the file in ssh server at the same time, by using 
+
+    ```
+    scp -r *.java *.md lib/ cs15lwi22awj@ieng6.ucsd.edu:markdown-parse; ssh cs15lwi22awj@ieng6.ucsd.edu "cd markdown-parse; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
+    ```
+
+    > The first part is doing the copying, after `;`, we login in to ssh server and doing all the command in `""`. Of course all the commands are seperated by `;` as well. 
+    
+    So the result is like:
+    ![Image](report3-8.jpg)
 ---
 End of 3rd lab report. Thanks for watching!
 
