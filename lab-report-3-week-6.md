@@ -32,9 +32,10 @@
     ![Image](report3-5.jpg)
 
     Then we try to run it:
+
     ![Image](report3-7.jpg)
 
-    >everything is working good!
+    >Everything is working good!
 
 * ## try only copying the files we need 
 
