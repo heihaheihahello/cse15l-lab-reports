@@ -58,9 +58,10 @@
     ```
 
     > The first part is doing the copying, after `;`, we login in to ssh server and doing all the command in `""`. Of course all the commands are seperated by `;` as well. 
-    
+
     So the result is like:
     ![Image](report3-8.jpg)
+    >That works!
 ---
 End of 3rd lab report. Thanks for watching!
 
