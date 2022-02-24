@@ -17,7 +17,7 @@
     ```
 
     These are tests for `Snippet1`:
-    
+
     ![Image](s1test.jpg)
 
     - result of my `MarkdownParse`test: not pass
@@ -35,6 +35,7 @@
 ---
 
 * [Snippet2](Snippet2.md)
+
     ![Image](s2preview.jpg)
     >we can see the following links which should be collected by `markdownparse`:
 
