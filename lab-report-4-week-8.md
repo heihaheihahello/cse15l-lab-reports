@@ -1,6 +1,7 @@
-## lab report 4-
-[my markdownparse]()
-[reviewed markdownparse](https://github.com/zhl010/markdown-parse/tree/24a93ada0f11daeb57ca6184866e2c5c0386c29c)
+## lab report 4
+
+- [my markdownparse](https://github.com/heihaheihahello/markdown-parse)
+- [reviewed markdownparse](https://github.com/zhl010/markdown-parse/tree/24a93ada0f11daeb57ca6184866e2c5c0386c29c)
 ---
 
 * [Snippet1](Snippet1.md)
@@ -78,7 +79,7 @@
 
     * Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.
 
-    **Answer:** I tried to solve this but with more than 10 lines of codes. I will say a small change is not enough. In my way to solve it, I create a method to check the empty lines between `[]` and `{}`. 
+    **Answer:** I tried to solve this but with more than 10 lines of codes. You can also check the new [markdownparse](https://github.com/heihaheihahello/markdown-parse/commit/4ec61f5725e3e45fb3159fdea81b750129c734cd). I will say a small change is not enough. In my way to solve it, I create a method to check the empty lines between `[]` and `{}`. 
     ```
     public static boolean checkempty(int startindex, int endindex, String contents) {
         for (int i = startindex; i<endindex; i++) {
