@@ -46,6 +46,7 @@
     ```
 
     These are tests for `Snippet2`:
+    
     ![Image](s2test.jpg)
 
     - result of my `MarkdownParse`test: not pass
