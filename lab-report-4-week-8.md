@@ -6,6 +6,7 @@
 ---
 
 * [Snippet1](Snippet1.md)
+
     ![Image](s1preview.jpg)
     >we can see the following links which should be collected by `markdownparse`:
 
