@@ -23,6 +23,7 @@
     Then we can get the following comparison:
 
     ![Image](diff.jpg)
+    (more difference...)
     > for each difference, we can see the line having difference in `results.txt`, and the difference itself. By tracing the line in the `results.txt`, we can see which test file causing difference and look for the bugs.
 
 ---
@@ -47,7 +48,7 @@
     ![Image](577.jpg)
     
     Difference: 
-    
+
     ![Image](test2.jpg)
     > by looking at line 1064 of my `results.txt`, we can see this difference is caused by `577.md`, and my output is `[]` while the provided `MarkdownParse`'s output is `[train.jpg]`.
 
