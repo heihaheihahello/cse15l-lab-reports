@@ -21,6 +21,7 @@
     ```
 
     Then we can get the following comparison:
+    
     ![Image](diff.jpg)
     > for each difference, we can see the line having difference in `results.txt`, and the difference itself. By tracing the line in the `results.txt`, we can see which test file causing difference and look for the bugs.
 
