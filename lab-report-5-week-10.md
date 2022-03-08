@@ -3,7 +3,7 @@
 ---
 
 * ## Looking for bugs using diff
-    1. we need to create a file contains all the result from test cases by using
+    (1) We need to create a file contains all the result from test cases by using
     
     ```
     bash script.sh > results.txt
@@ -13,9 +13,9 @@
     ![Image](createresult.jpg)
     >In the directory we can see a new file `results.txt` is created. In this file we can see all the test files and corresponding results.
 
-    2. Repeating the step 1 for my own `markdownParse` and provided `markdownParse`
+    (2) Repeating the step 1 for my own `markdownParse` and provided `markdownParse`
 
-    3. Now we can use command `diff` to compare two groups of results by using
+    (3) Now we can use command `diff` to compare two groups of results by using
     ```
     diff results.txt ../markdown-parse-politz/results.txt
     ```
