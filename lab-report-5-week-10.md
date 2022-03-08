@@ -41,7 +41,8 @@
     - **whose is correct**； By using the preview function, this "link" turns in `[a](url "tit")` and is not counted as link. So my `MarkdownParse` is wrong and the provided `MarkdownParse` is correct. 
     - **analyze the bug**: If we look at the preview, it is interesting that `&quot;` turn in `"` in the preview instead of keeping the form of txt `&quot;`. When this `md` file turn into `html` file, all chars of `&quot;` will turn in `"` and prevent the contents inside `()` to be a link. In my `MarkdownParse`, I didn't check if the potential link contains `&quot;` and then cause this bug. In addition, after I search in the internet, there are many HTML Character Entities like this, like `&gt;` to `>`. 
     - **Solution**: One way to solve it is to add a check method which checks if a potential link contains any Character Entities like "&quot;". But this way seems unwise because there are tons of Character Entities. Comparing one by one is time-consuming. Maybe we can use another way. All these entities are in form of `&xxxx;` (start with `&` and end with `;`). I think we can use a check method to see if there is a one pair of `&` and `;`. This is exactly like the searching of `[]` pair and `()` pair. So it would not be hard to solve it.
-    >we can add a new method. Right before we append the link into final result, we can put another if statement of check html character entities inside this `if` statement:
+    >we can add a new method. Right before we append the link into final result, we can put another if statement of check html character entities inside this `if` statement:&darr;
+
     ![Image](test1placetofix.jpg) 
 
     ---
@@ -57,7 +58,8 @@
     - **whose is correct**； By using the preview function, this "link" is actually a image and is not counted as link. So my `MarkdownParse` is correct and the provided `MarkdownParse` is incorrect. 
     - **analyze the bug**: becuase the code to add image `![...](...)`is almost the same as the code of link`[...](...)`. The only difference is the `!` before `[]`. And the provided `MarkdownParse` does not check if there is a `!` before `[]` so that it will treat all images as links, and causing bugs. My 'MarkdownParse' has this check so it works good. 
     - **Solution**: To solve it, we need to check if there is a `!` before the `[...](...)` form we found. So at the `if` statement of adding the link into result, we can add the one extra checking statement to check the String before `[` is `!` or not. If so, we skip this potential link and look for next. If not, that means this potential link is a link and we can add it into the result.
-    >In the provided `MarkdownParse`, we can find the the following `if` statement as the last checking point and add the fixing statement here:
+    >In the provided `MarkdownParse`, we can find the the following `if` statement as the last checking point and add the fixing statement here:&darr;
+
     ![Image](test2placetofix.jpg) 
     
     For example, one workable checking statement is the following(the one my `MarkdownParse` used):
