@@ -55,10 +55,7 @@
     ### **Analysis**: 
     - **whose is correct**； By using the preview function, this "link" is actually a image and is not counted as link. So my `MarkdownParse` is correct and the provided `MarkdownParse` is incorrect. 
     - **analyze the bug**: becuase the code to add image `![...](...)`is almost the same as the code of link`[...](...)`. The only difference is the `!` before `[]`. And the provided `MarkdownParse` does not check if there is a `!` before `[]` so that it will treat all images as links, and causing bugs. My 'MarkdownParse' has this check so it works good. 
-    - **Solution**: It is easy to solve this bug. We just need to check if there is a `!` before the `[...](...)` form we found. So at the `if` statement to add the link into result, we can add the follow checking statement: 
-    ```
-    markdown.substring(nextOpenBracket-1, nextOpenBracket).equals("!") == false)
-    ``` 
+    - **Solution**: To solve it, we need to check if there is a `!` before the `[...](...)` form we found. So at the `if` statement of adding the link into result, we can add the one extra checking statement to check the String before `[` is `!` or not. If so, we skip this potential link and look for next. If not, that means this potential link is a link and we can add it into the result.
     >In the provided `MarkdownParse`, we can find the the following `if` statement as the last checking point and add the fixing statement here:
     ![Image](test2placetofix.jpg) 
 
