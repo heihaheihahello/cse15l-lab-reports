@@ -58,6 +58,11 @@
     - **Solution**: To solve it, we need to check if there is a `!` before the `[...](...)` form we found. So at the `if` statement of adding the link into result, we can add the one extra checking statement to check the String before `[` is `!` or not. If so, we skip this potential link and look for next. If not, that means this potential link is a link and we can add it into the result.
     >In the provided `MarkdownParse`, we can find the the following `if` statement as the last checking point and add the fixing statement here:
     ![Image](test2placetofix.jpg) 
+    
+    For example, one workable checking statement is the following(the one my `MarkdownParse` used):
+    ```
+    markdown.substring(nextOpenBracket-1, nextOpenBracket).equals("!") == false
+    ```
 
 ---
 end of 4th lab report.
