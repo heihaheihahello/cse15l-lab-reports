@@ -39,11 +39,12 @@
 
     ### **Analysis**: 
     - **whose is correct**； By using the preview function, this "link" turns in `[a](url "tit")` and is not counted as link. So my `MarkdownParse` is wrong and the provided `MarkdownParse` is correct. 
-    - **analyze the bug**: If we look at the preview, it is interesting that `&quot;` turn in `"` in the preview instead of keeping the form of txt `&quot;`. When this `md` file turn into `html` file, all chars of `&quot;` will turn in `"` and prevent the contents inside `()` to be a link. In my `MarkdownParse`, I didn't check if the potential link contains `&quot;` and then cause this bug. In addition, after I search in the internet, there are many HTML Character Entities like this, like `&gt;` to `>`. 
-    - **Solution**: One way to solve it is to add a check method which checks if a potential link contains any Character Entities like "&quot;". But this way seems unwise because there are tons of Character Entities. Comparing one by one is time-consuming. Maybe we can use another way. All these entities are in form of `&xxxx;` (start with `&` and end with `;`). I think we can use a check method to see if there is a one pair of `&` and `;` in the contents between `()`. This is exactly like the searching of `[]` pair and `()` pair. So it would not be hard to solve it.
-    >we can add a new method. Right before we append the link into final result, we can add the if statement of check html character entities inside this `if` statement:&darr;
+    - **analyze the bug**: If we look at the preview, it is interesting that `&quot;` turn in `"` in the preview instead of keeping the form of txt `&quot;`. When this `md` file turn into `html` file, all chars of `&quot;` will turn in `"`. And if we delete the ` ` between `url` and `&quot;tit&quot;`, we can notice now this content seems as a link. And if we keep this space ` ` and delete one `;`, this content is not a link. So the conclusion is that the problem causing bug is not such html character entities of &quot;. The real problem causing bug is the space` ` between contents in `()`.
+    - **Solution**: So solve this bug, we need to check if there is ` ` between contents in `()`. Notice that we can not directly check if everything inside the `()` contans space ` ` because it is ok to add space before the link or after the link. We only need to check if there is space ` ` within the link. We can use the `.trim()` to clean the space` ` before and after the link. The `.trim()` will not affect the space` ` within the link. That is what we want. And then we can add a if statement to check if this cleaned potential link has space ` `. If so, this potential link is not a link and we will not add it into result.
+    >To fix it in my `MarkdownParse`, we can do revise here: &darr;
 
     ![Image](test1placetofix.jpg) 
+    > before this `if` statement, we can use the `.trim()` to clean the potential link, and then in the checking condition of this `if` statement, we can add one more condition to check if this potential link contains ` `. If there exist space ` `, then we will not `add` this potential link. 
 
     ---
     * ## **test 2-[577.md](577.md)**
