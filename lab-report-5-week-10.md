@@ -27,12 +27,9 @@
 
 ---
 * ## Analyze two test with different results
-    * ## **test 1-(41.md)**
-
-    ```
-    [a](url &quot;tit&quot;)
-
-    ```
+    * ## **test 1-[41.md](41.md)**
+    ![Image](41.jpg)
+    
     Difference: 
     ![Image](test1.jpg)
     > by looking at line 691 of my `results.txt` we can see this difference is caused by `41.md`, and my output is `[url &quot;tit&quot;]` while the provided `MarkdownParse`'s output is `[]`.
@@ -46,10 +43,8 @@
 
     ---
     * ## **test 2-[577.md](577.md)**
-    ```
-    ![foo](train.jpg)
-
-    ```
+    ![Image](577.jpg)
+    
     Difference: 
     ![Image](test2.jpg)
     > by looking at line 1064 of my `results.txt`, we can see this difference is caused by `577.md`, and my output is `[]` while the provided `MarkdownParse`'s output is `[train.jpg]`.
