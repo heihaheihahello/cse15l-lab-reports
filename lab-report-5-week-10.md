@@ -44,7 +44,7 @@
     >To fix it in my `MarkdownParse`, we can do revise here: &darr;
 
     ![Image](test1placetofix.jpg) 
-    > before this `if` statement, we can use the `.trim()` to clean the potential link, and then in the checking condition of this `if` statement, we can add one more condition to check if this potential link contains ` ` . If there exist space `_`, then we will not `add` this potential link. 
+    > Before this `if` statement, we have got the index of `()` pair. So we can use the `.trim()` to clean the potential link within `()`, and then in the checking condition of this `if` statement, we can add one more condition to check if this potential link contains ` ` . If there exist space `_`, then we will not `add` this potential link. 
 
     ---
     * ## **test 2-[577.md](577.md)**
