@@ -37,6 +37,7 @@
     ![Image](test1.jpg)
     > by looking at line 691 of my `results.txt` we can see this difference is caused by `41.md`, and my output is `[url &quot;tit&quot;]` while the provided `MarkdownParse`'s output is `[]`.
 
+
     ## Analysis: 
     - **whose is correct**； By using the preview function, this "link" turns in `[a](url "tit")` and is not counted as link. So my `MarkdownParse` is wrong and the provided `MarkdownParse` is correct. 
     - **analyze the bug**: If we look at the preview, it is interesting that `&quot;` turn in `"` in the preview instead of keeping the form of txt `&quot;`. When this `md` file turn into `html` file, all chars of `&quot;` will turn in `"`. However, if we delete the space`_` between `url` and `&quot;tit&quot;`, we can notice now this content seems as a link. And if we keep this space`_` and delete one `;`, this content is not a link. So the conclusion is that the problem causing bug is not such html character entities of `&quot;`. The real problem causing bug is the space`_` between contents in `()`.
@@ -54,6 +55,7 @@
 
     ![Image](test2.jpg)
     > by looking at line 1064 of my `results.txt`, we can see this difference is caused by `577.md`, and my output is `[]` while the provided `MarkdownParse`'s output is `[train.jpg]`.
+
 
     ## Analysis: 
     - **whose is correct**； By using the preview function, this "link" is actually a image and is not counted as link. So my `MarkdownParse` is correct and the provided `MarkdownParse` is incorrect. 
